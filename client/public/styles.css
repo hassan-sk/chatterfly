@@ -1,0 +1,980 @@
+@font-face {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  src: url(./Roboto-Regular.ttf);
+  src: local("Roboto"), url(./Roboto-Regular.ttf) format("truetype");
+}
+body, html {
+  padding: 0;
+  margin: 0;
+  font-family: "Roboto";
+}
+body ::-webkit-scrollbar, html ::-webkit-scrollbar {
+  width: 0.3rem;
+}
+body ::-webkit-scrollbar-track, html ::-webkit-scrollbar-track {
+  background-color: #faeeff;
+}
+body ::-webkit-scrollbar-thumb, html ::-webkit-scrollbar-thumb {
+  background-color: #300042;
+}
+
+:focus {
+  outline: none;
+}
+
+.ce_1rem_distanced_collection > *:not(:last-child) {
+  padding-bottom: 1rem;
+}
+
+.ce_1rem_margin_collection > *:not(:last-child) {
+  margin-bottom: 1rem;
+}
+
+.ce_rows {
+  display: flex;
+}
+.ce_rows > * {
+  flex: 1;
+}
+
+.ce_basic_button.small {
+  font-size: 0.8rem;
+  padding: 4px;
+  margin: 2px;
+  border-radius: 5px;
+  height: 1.7rem;
+}
+
+.ce_basic_button {
+  border-style: none;
+  border: 1px solid transparent;
+  background-color: #5e0083;
+  color: white;
+  font-size: 1rem;
+  height: 2.4rem;
+  font-weight: bold;
+  padding: 10px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  -webkit-transition: all 0.3s ease-out;
+  -moz-transition: all 0.3s ease-out;
+  -o-transition: all 0.3s ease-out;
+  -ms-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+}
+.ce_basic_button:disabled {
+  pointer-events: none;
+}
+.ce_basic_button:hover {
+  color: #5e0083;
+  background-color: white;
+  border: 1px solid #5e0083;
+}
+.ce_basic_button.loading > * {
+  animation: scaleandrotate 0.5s infinite linear;
+}
+
+@keyframes scaleandrotate {
+  0% {
+    transform: rotate(0deg) scale(1);
+  }
+  50% {
+    transform: rotate(180deg) scale(1.2);
+  }
+  100% {
+    transform: rotate(360deg) scale(1);
+  }
+}
+.ce_divider {
+  display: block;
+  border-bottom: 1px solid #c0c0c0;
+}
+
+.padding_1rem {
+  padding: 1rem;
+}
+
+.ce_primary_header {
+  color: #5e0083;
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.ce_invisible_button {
+  padding: none;
+  margin: none;
+  background-color: transparent;
+  border-style: none;
+  cursor: pointer;
+}
+.ce_invisible_button:disabled {
+  pointer-events: none;
+}
+
+.ce_small_highlight_font, .ce_small_highlight_font * {
+  font-size: 0.8rem;
+  color: #a555c5;
+}
+
+.right_align {
+  text-align: right;
+}
+
+.ce_vertical_center {
+  display: flex;
+  align-items: center;
+}
+
+.fluid {
+  width: 100%;
+}
+
+.ce_general_input {
+  font-size: 1rem;
+}
+.ce_general_input .label {
+  font-size: 0.9rem;
+  color: #161616;
+  padding-bottom: 2px;
+}
+.ce_general_input input {
+  background-color: transparent;
+  width: 100%;
+  border-style: none;
+  border-bottom: 2px solid #5e0083;
+}
+.ce_general_input input:focus {
+  border-bottom: 2px solid #63a8e9;
+}
+
+.small .label {
+  font-size: 0.8rem;
+}
+.small input {
+  font-size: 1.5rem;
+}
+
+.ce_underline_input {
+  width: 100%;
+  margin-bottom: 20px;
+}
+.ce_underline_input.error .label {
+  color: #ff0040;
+}
+.ce_underline_input.error input {
+  margin-bottom: 0px;
+  border-bottom: 2px solid #ff0040;
+}
+.ce_underline_input .label {
+  display: block;
+  font-size: 0.9rem;
+  color: #858585;
+}
+.ce_underline_input input {
+  width: inherit;
+  font-size: 1.2rem;
+  border-style: none;
+  margin-bottom: 2px;
+  padding-bottom: 2px;
+}
+.ce_underline_input input:focus {
+  margin-bottom: 0px;
+  border-bottom: 2px solid #5e0083;
+}
+.ce_underline_input input.active {
+  margin-bottom: 0px;
+  border-bottom: 2px solid #5e0083;
+}
+.ce_underline_input input:disabled {
+  color: black;
+  background-color: transparent;
+}
+
+.ce_bordered_input {
+  width: 100%;
+  margin-bottom: 20px;
+}
+.ce_bordered_input.error .label {
+  color: #ff0040;
+}
+.ce_bordered_input.error input {
+  margin-bottom: 0px;
+  border-bottom: 2px solid #ff0040;
+}
+.ce_bordered_input .label {
+  display: block;
+  font-size: 0.9rem;
+  color: #858585;
+}
+
+.ce_input_with_button {
+  position: relative;
+}
+.ce_input_with_button > .ce_underline_input input {
+  width: 90%;
+}
+.ce_input_with_button button {
+  font-size: 1rem;
+  background-color: transparent;
+  border-style: none;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  transform: translate(0, -10%);
+}
+.ce_input_with_button .loading {
+  animation: heartbeat 0.5s infinite linear;
+}
+
+@keyframes heartbeat {
+  0% {
+    transform: scale(0.8);
+    color: #5e0083;
+  }
+  70% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(0.1);
+    color: transparent;
+  }
+}
+@keyframes fadebeat {
+  0% {
+    border: 50px solid white;
+  }
+  50% {
+    border: 1px solid transparent;
+  }
+  100% {
+    border: 50px solid white;
+  }
+}
+.ce_segment {
+  border: 1px solid #a555c5;
+  margin: 0.7rem;
+  border-radius: 1rem;
+  padding: 10px;
+  padding-right: 15px;
+  padding-left: 15px;
+}
+.ce_segment .title {
+  font-size: 1.5rem;
+  color: #5e0083;
+  padding-bottom: 0.5rem;
+}
+
+.entry {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  background-image: linear-gradient(#300042, #5e0083);
+  justify-content: center;
+  align-items: center;
+}
+.entry.loading {
+  color: white;
+}
+.entry.loading > div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  width: 30vh;
+  height: 30vh;
+  font-size: 5vh;
+  border-radius: 50%;
+  animation: fadebeat 1s infinite linear;
+  padding: 10px;
+  margin: 10px;
+}
+.entry .holder {
+  background-color: rgba(255, 255, 255, 0.3);
+  border-radius: 0.5rem;
+  padding: 0.5rem;
+}
+.entry .holder .container {
+  background-color: white;
+  border-radius: 0.2rem;
+  padding: 10px;
+}
+.entry .holder .container .login {
+  width: 25vw;
+  min-width: 350px;
+  max-width: 400px;
+}
+.entry .holder .container .register {
+  max-height: 90vh;
+  width: 45vw;
+  min-width: 650px;
+  max-width: 700px;
+}
+.entry .holder .container .register .holder {
+  width: 99%;
+  display: flex;
+}
+.entry .holder .container .register .holder .leftSide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 1.2;
+  flex-direction: column;
+}
+.entry .holder .container .register .holder .leftSide > span {
+  font-size: 0.8rem;
+  color: #858585;
+}
+.entry .holder .container .register .holder .leftSide .imageHolder {
+  border-radius: 10%;
+  width: 200px;
+  height: 200px;
+  overflow: hidden;
+  margin: 0;
+  margin-bottom: 10px;
+}
+.entry .holder .container .register .holder .leftSide .imageHolder > img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.entry .holder .container .register .holder .rightSide {
+  flex: 2;
+}
+
+.errorBox {
+  position: absolute;
+  padding: 10px;
+  background-color: white;
+  margin: 10px;
+  width: 300px;
+  top: 0;
+  right: 0;
+}
+.errorBox > .header {
+  font-size: 1.2rem;
+  color: #880000;
+  border-bottom: 1px solid #858585;
+  margin-bottom: 5px;
+}
+
+.app {
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  background-color: white;
+}
+.app .menu {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  min-width: 420px;
+}
+.app .menu .header {
+  height: 6vh;
+  min-height: 50px;
+  max-height: 60px;
+  background-color: #5e0083;
+  padding: 7px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.app .menu .header .title {
+  color: white;
+  font-size: 1.3rem;
+  padding-left: 10px;
+}
+.app .menu .header .back {
+  font-size: 1.3rem;
+  position: relative;
+}
+.app .menu .header .back button {
+  background-color: transparent;
+  border-style: none;
+  color: white;
+  font-size: 1.5rem;
+  padding-top: 5px;
+  border-radius: 50%;
+}
+.app .menu .header .back button:hover {
+  background-color: white;
+  color: #5e0083;
+}
+.app .menu .header .profilePic {
+  background-color: transparent;
+  border-style: none;
+  height: 3rem;
+  width: 3rem;
+}
+.app .menu .header .profilePic img {
+  height: inherit;
+  width: inherit;
+  border-radius: 50%;
+}
+.app .menu .header .setting {
+  font-size: 1.3rem;
+  position: relative;
+}
+.app .menu .header .setting button {
+  background-color: transparent;
+  border-style: none;
+  color: white;
+  font-size: 1.5rem;
+  padding-top: 5px;
+}
+.app .menu .header .setting .active {
+  background-color: white;
+  color: #5e0083;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  z-index: 50;
+}
+.app .menu .header .setting .settingMenu {
+  position: absolute;
+  width: 170px;
+  background-color: white;
+  right: 0px;
+  border-radius: 3px;
+  border-top-right-radius: 0px;
+  padding: 5px;
+  z-index: 49;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.app .menu .header .setting .settingMenu button {
+  background-color: transparent;
+  border-style: none;
+  display: block;
+  text-align: left;
+  width: 100%;
+  padding-bottom: 3px;
+  border-bottom: solid #858585 1px;
+  color: #858585;
+  font-size: 0.9rem;
+}
+.app .menu .header .setting .settingMenu :hover {
+  background-color: #5e0083;
+  color: white;
+}
+.app .menu .header .setting .settingMenu :last-child {
+  border-bottom: none;
+  border-bottom-left-radius: 3px;
+  border-bottom-right-radius: 3px;
+}
+.app .menu .header .setting .settingMenu :first-child {
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
+}
+.app .menu .dataContainer {
+  overflow: auto;
+}
+.app .menu .dataContainer .profilePicHolder {
+  width: 100%;
+  position: relative;
+}
+.app .menu .dataContainer .profilePicHolder .changeButton {
+  position: absolute;
+  right: 22%;
+  bottom: 22%;
+  border-radius: 50%;
+  height: 2.5rem;
+  width: 2.5rem;
+  font-size: 1.2rem;
+  border-style: none;
+  background-color: #5e0083;
+  color: white;
+}
+.app .menu .dataContainer .profilePicHolder .profilePic {
+  border: 1px solid #5e0083;
+  width: 14rem;
+  height: 14rem;
+  margin-top: 1rem;
+  border-radius: 50%;
+  left: 50%;
+  transform: translate(-50%, 0%);
+  position: relative;
+}
+.app .menu .dataContainer .infoHolder {
+  padding: 20px;
+}
+.app .menu .searchbar {
+  height: 8vh;
+  min-height: 30px;
+  max-height: 40px;
+  background-color: #a555c5;
+  padding: 8px;
+  padding-right: 10px;
+  padding-left: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.app .menu .searchbar input {
+  width: 100%;
+  height: 100%;
+  border-radius: 15px;
+  border-style: none;
+  padding-right: 33px;
+  padding-left: 13px;
+  font-size: 1.2rem;
+  color: #161616;
+}
+.app .menu .searchbar div {
+  position: absolute;
+  right: 20px;
+  color: #5e0083;
+}
+.app .menu .filterbar {
+  height: 8vh;
+  min-height: 30px;
+  max-height: 40px;
+  background-color: #cf9be4;
+  padding: 8px;
+  padding-right: 10px;
+  padding-left: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  overflow: auto;
+}
+.app .menu .filterbar button {
+  font-size: 1rem;
+  flex: 20;
+  color: white;
+  margin-right: 10px;
+  background: #5e0083;
+  border-style: none;
+  border-radius: 10px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  border: transparent 1px solid;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px transparent solid;
+}
+.app .menu .filterbar button:disabled {
+  pointer-events: none;
+}
+.app .menu .filterbar button span {
+  margin-left: 4px;
+}
+.app .menu .filterbar button div {
+  text-align: right;
+}
+.app .menu .filterbar button:hover {
+  color: #5e0083;
+  background: white;
+  border: #5e0083 1px solid;
+}
+.app .menu .filterbar .active {
+  border: 1px white solid;
+  color: #5e0083;
+  background: white;
+  pointer-events: none;
+}
+.app .menu .filterbar :last-child {
+  flex: 25;
+  margin-right: 0;
+}
+.app .menu .contactList {
+  background-color: #faeeff;
+  flex: 1;
+  overflow: auto;
+  z-index: 99;
+}
+.app .menu .contactList .LoaderView {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  color: #858585;
+  font-size: 2rem;
+}
+.app .menu .contactList .LoaderView .graphic {
+  font-size: 10rem;
+  animation: heartbeat 1s infinite linear;
+}
+.app .menu .contactList .noContactsView {
+  word-wrap: break-word;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  height: 100%;
+  font-size: 1.3rem;
+  color: #300042;
+}
+.app .menu .contactList .noContactsView .graphic {
+  font-size: 6rem;
+}
+.app .menu .contactList a > .singleView {
+  height: 7vh;
+  min-height: 70px;
+  min-height: 80px;
+  border-bottom: #cf9be4 1px solid;
+  display: flex;
+  align-items: center;
+  position: relative;
+  border-left: 3px solid transparent;
+}
+.app .menu .contactList a > .singleView:hover {
+  background-color: #f0c8ff;
+  border-left: 3px solid #300042;
+}
+.app .menu .contactList a > .singleView .image {
+  width: 4rem;
+  height: 4rem;
+  margin-left: 20px;
+  margin-right: 20px;
+  border-radius: 50%;
+}
+.app .menu .contactList a > .singleView .info {
+  color: #300042;
+  display: flex;
+  flex-direction: column;
+}
+.app .menu .contactList a > .singleView .info .name {
+  word-wrap: break-word;
+  align-items: flex-end;
+  font-size: 1.5rem;
+  padding-bottom: 5px;
+  flex: 1;
+}
+.app .menu .contactList a > .singleView .info .status {
+  flex: 1;
+  font-size: 0.9rem;
+  color: #858585;
+}
+.app .menu .contactList a > .singleView .info .status span div {
+  display: inline;
+  padding-right: 5px;
+}
+.app .menu .contactList a > .singleView .info .status span .active {
+  color: #149614;
+}
+.app .menu .contactList a > .singleView .info .status span .inactive {
+  color: #ca0000;
+}
+.app .menu .contactList a > .singleView .pendingMessages {
+  z-index: 100000;
+  display: inline;
+  position: absolute;
+  margin: 5px;
+  padding: 3px;
+  padding-left: 6px;
+  right: 0;
+  top: 0;
+  color: white;
+  background-image: linear-gradient(#44e644, #149614);
+  border-radius: 5px;
+  font-size: 0.9rem;
+  display: flex;
+  align-items: center;
+}
+.app .menu .contactList a > .singleView .pendingMessages > .textHolder {
+  padding-right: 3px;
+}
+.app .main {
+  flex: 3;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+.app .main > .header {
+  height: 6vh;
+  min-height: 50px;
+  max-height: 60px;
+  background-color: #5e0083;
+  border-left: solid #858585 1px;
+  padding: 7px;
+  padding-left: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.app .main > .header .userDetails {
+  padding-left: 10px;
+  color: white;
+  flex: 1;
+}
+.app .main > .header .userDetails .name {
+  font-size: 1.2rem;
+}
+.app .main > .header .userDetails .status {
+  color: #c0c0c0;
+  font-size: 0.8rem;
+}
+.app .main > .header .profilePic {
+  background-color: transparent;
+  border-style: none;
+  height: 3rem;
+  width: 3rem;
+}
+.app .main > .header .profilePic img {
+  height: inherit;
+  width: inherit;
+  border-radius: 50%;
+}
+.app .main > .header .favorite {
+  margin-right: 10px;
+  font-size: 1.3rem;
+  position: relative;
+}
+.app .main > .header .favorite button {
+  background-color: transparent;
+  border-style: none;
+  color: white;
+  font-size: 1.5rem;
+  padding-top: 5px;
+}
+.app .main > .header .favorite .active {
+  color: yellow;
+  z-index: 50;
+}
+.app .main > .header .setting {
+  font-size: 1.3rem;
+  position: relative;
+}
+.app .main > .header .setting button {
+  background-color: transparent;
+  border-style: none;
+  color: white;
+  font-size: 1.5rem;
+  padding-top: 5px;
+}
+.app .main > .header .setting .active {
+  background-color: white;
+  color: #5e0083;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  z-index: 50;
+}
+.app .main > .header .setting .settingMenu {
+  position: absolute;
+  width: 170px;
+  background-color: white;
+  right: 0px;
+  border-radius: 3px;
+  border-top-right-radius: 0px;
+  padding: 5px;
+  z-index: 49;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.app .main > .header .setting .settingMenu button {
+  background-color: transparent;
+  border-style: none;
+  display: block;
+  text-align: left;
+  width: 100%;
+  padding-bottom: 3px;
+  border-bottom: solid #858585 1px;
+  color: #858585;
+  font-size: 0.9rem;
+}
+.app .main > .header .setting .settingMenu :hover {
+  background-color: #5e0083;
+  color: white;
+}
+.app .main > .header .setting .settingMenu :last-child {
+  border-bottom: none;
+  border-bottom-left-radius: 3px;
+  border-bottom-right-radius: 3px;
+}
+.app .main > .header .setting .settingMenu :first-child {
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
+}
+.app .main .chatLog {
+  flex: 1;
+  background-color: #300042;
+  display: flex;
+  flex-direction: column-reverse;
+  padding-left: 20px;
+  padding-right: 20px;
+  overflow: auto;
+}
+.app .main .chatLog .message {
+  margin-bottom: 10px;
+  padding: 10px;
+  padding-bottom: 5px;
+  width: 500px;
+  background-color: white;
+  border-radius: 10px;
+  word-break: normal;
+  font-size: 1.05rem;
+}
+.app .main .chatLog .message .metadata {
+  margin-top: 2px;
+  font-size: 0.7rem;
+  text-align: right;
+  color: #858585;
+}
+.app .main .chatLog .message .metadata .bluecheck {
+  color: #63a8e9;
+}
+.app .main .chatLog .message.received {
+  border-bottom-left-radius: 0px;
+}
+.app .main .chatLog .message.sent {
+  border-bottom-right-radius: 0px;
+  margin-left: auto;
+}
+.app .main .chatInput {
+  background-color: #cf9be4;
+  height: 4rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.app .main .chatInput .inputBox {
+  padding-left: 10px;
+  padding-right: 60px;
+  height: calc(100% - 14px);
+  width: calc(100% - 100px);
+  max-height: 200px;
+  border-top-left-radius: 40px;
+  border-bottom-left-radius: 40px;
+  border-top-right-radius: 100px;
+  border-bottom-right-radius: 100px;
+  background-color: #ffffff;
+  position: relative;
+}
+.app .main .chatInput .inputBox input {
+  border-style: none;
+  font-size: 1.4rem;
+  width: 100%;
+  height: 100%;
+  background-color: transparent;
+}
+.app .main .chatInput .inputBox .buttonHolder {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  border-radius: 50%;
+  height: 2.5rem;
+  width: 2.5rem;
+  transform: translate(-25%, -50%);
+  background-color: #5e0083;
+  display: flex;
+  color: white;
+  font-size: 1.5rem;
+  border: 1px solid transparent;
+}
+.app .main .chatInput .inputBox .buttonHolder:hover {
+  background-color: white;
+  color: #5e0083;
+  border: 1px solid #5e0083;
+}
+.app .main .chatInput .inputBox .buttonHolder button {
+  background-color: transparent;
+  border: none;
+  color: inherit;
+  font-size: inherit;
+}
+.app .main .chatStartView {
+  background-color: #cf9be4;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: inherit;
+  flex-direction: column;
+  border-left: solid #858585 1px;
+  color: #300042;
+}
+.app .main .chatStartView .graphic {
+  font-size: 10rem;
+}
+.app .main .profileView {
+  background-color: white;
+  box-shadow: -1px 0px 20px #300042;
+  position: absolute;
+  right: 0px;
+  height: 100%;
+  width: 50vh;
+  min-width: 400px;
+  max-width: 500px;
+}
+.app .main .profileView > .header {
+  height: 6vh;
+  min-height: 50px;
+  max-height: 60px;
+  background-color: #5e0083;
+  border-left: solid #858585 1px;
+  padding: 7px;
+  padding-left: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.app .main .profileView > .header .title {
+  font-size: 1.3rem;
+  color: white;
+  padding-right: 10px;
+}
+.app .main .profileView > .header .back {
+  font-size: 1.3rem;
+  position: relative;
+}
+.app .main .profileView > .header .back button {
+  background-color: transparent;
+  border-style: none;
+  color: white;
+  font-size: 1.5rem;
+  padding-top: 5px;
+  border-radius: 50%;
+}
+.app .main .profileView > .header .back button:hover {
+  background-color: white;
+  color: #5e0083;
+}
+.app .main .profileView .infoHolder {
+  overflow: auto;
+  padding: 20px;
+}
+.app .main .profileView .infoHolder .profilePicHolder {
+  width: 100%;
+  position: relative;
+}
+.app .main .profileView .infoHolder .profilePicHolder .profilePic {
+  border: 1px solid #5e0083;
+  width: 14rem;
+  height: 14rem;
+  margin-top: 1rem;
+  border-radius: 50%;
+  left: 50%;
+  transform: translate(-50%, 0%);
+  position: relative;
+  margin-bottom: 10px;
+}
+.app .userView {
+  width: 500px;
+}
+
+.my-node-enter {
+  opacity: 0;
+}
+
+.my-node-enter-active {
+  opacity: 1;
+  transition: opacity 200ms;
+}
+
+.my-node-exit {
+  opacity: 1;
+}
+
+.my-node-exit-active {
+  opacity: 0;
+  transition: opacity 200ms;
+}
+
+/*# sourceMappingURL=styles.css.map */

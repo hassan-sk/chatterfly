@@ -1,0 +1,13 @@
+{
+  "type": "service_account",
+  "project_id": "chatterfly-hsn",
+  "private_key_id": "4fd109791cb3f909609e85beaa45e1b1029740a8",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQDlYCcC8JT+iMAi\nlFWz8ZkG80F2v3v/Po2fTjwHKWU7qpqmDe9PI6aID2nOoJa1uOFSlC3qDMzaQ9+5\nhUT8GbCc3nB7e1NECyrSITyQisnXD922jOKn+YFRnQkMZ1ZAgKjTxgqas6PGD8A7\nSFQwPVdMD6zlmHK68efeAmQS7CxYtkFFIGNUTHkfrYoDjyBCOG7DB13wuvPuKryd\ndTcD5tXbkWEGtyNj8+VCBb0EF17+F5s7uXOKk8hdqSOLC3j9RV9axnC8CPLQPyUK\nyvA91rr3gU8ql3YWcfLOneY1MkPm28J0VWdiMfU+MuyRxmIOnxChElpUH8LjxNWV\nKko6dq4BAgMBAAECggEAGjCnY6uKp6F/prMfMgOlAGkoEWH9y4Ad9ZGeQwcT+wMY\n01sF9xhP/HseDqzBaJBqkd4/e9joTweu9OTloo9gXhj76O2E7WEFC6cl3i8qqray\nDxT5EErp3CK9FMB71bObE0sqjM10JrpHrb0td7CZViL4D+MfPn8+hVfqi0qSKbK2\nW9FS0nc1yowasUx/0HZhoBXL8RIPs1yupRd/XihP8Z6WG9zrE9BLqr4iqjl5cBkE\nSEpIfcBdC7zzirGdD9oprzBLKvMD6NaOmQkCJgQ6wU2s0lShfXiopF+DnDTR/NEj\nFkiKuNJsDq3IMXWkScJWo3RNa3z2WUuAV6EzsPTJrQKBgQD1JFbSINQLkSZ4/PLc\nU0j6Hc6fjyitjroe/RvnUL2MjY0Q7bVcJvqrNcg8JmJzD+fVfmQZxuRJATVvpn0R\nWuuqPPttuERNWuoxgRAqtUzT2vO6IDqYEeOS/MaJiPGQifIHCfIFbU4tTQ48HI4m\n9BZ/hlzWw+FbGxioN0fxT7hlRwKBgQDviQnuIADaJn7zSGQwmwJnzORPcJcA+on3\nO32GYXFDN7F2o1ISwDGW/1l5U8xD1TJ2Sprf53DdRDsS+hqTPLPEMPxvLmN+BKjS\nTIovlhLBDQGwi7uacqRD7839IaZVozZMoFn5dtFYcfyqvIVRDaYTw0SfUM3BKwiy\nInm4MFiWdwKBgApJUhNTKVKq7pBZHN+95uwH4Cm12iEeQhUWzdrw+mMxdV/meZu6\nTv5sLVDI04y8eB/vQ8gJHn8pu9JJjCn0RLtJ/8rk1ojgbb9SCRmhre2d3GhM/ehv\np7r9PF99DZXhE/TTqAIuSf+Aoj5HfHeJ+n+zZaXlZklqY6h7WVt42uX1AoGAJ/h+\nJ7Y/bieuV3pk/ZdgN2IBVyA6knc8Pn023Q21kLniayGluGtJ2yCRFaXeGBOjcAnS\n/jnoo4OXN/t0I82lUb+63/Klt4mfgjgzdu1cA8rf1U376DHpJ00E2pCa6P9rOC4p\n1W72UAP1XahHttbIN9QFx2/8ZZeAw/jsxseKgNECgYEA6t9YMydx3y0+AGi9cuLv\n9L3xKeYFaoMZLW06BJbXErpW9Nd1H6QRyTHs92/bzhKZx1eCKkzATg9E1TWxAz27\nf8RA/RRAxTO/+C8gO9Q/XLUTvpDDwIIy3yw5eUdqZm0+tL1mhJWr7vszMxikl/1p\nEgxqBKWJewOPrhmV6hdPonM=\n-----END PRIVATE KEY-----\n",
+  "client_email": "firebase-adminsdk-u35r6@chatterfly-hsn.iam.gserviceaccount.com",
+  "client_id": "104509022170889426035",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/firebase-adminsdk-u35r6%40chatterfly-hsn.iam.gserviceaccount.com",
+  "storageBucket": "gs://chatterfly-hsn.appspot.com"
+}

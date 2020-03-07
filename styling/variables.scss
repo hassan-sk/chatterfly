@@ -1,0 +1,48 @@
+:root {
+    
+    --light: #ffffff;
+    --theme-color-1: #300042;
+    --theme-color-2: #5e0083;
+    --theme-color-3: #a555c5;
+    --theme-color-4: #cf9be4;
+    --theme-color-5: #f0c8ff;
+    --theme-color-6: #faeeff;
+    
+    --secondary-color: #ff0040;
+    --primary-text-color: #ffffff;
+    --alt-text-color-1: #161616;
+    --alt-text-color-2: #858585;
+    --alt-text-color-3: #c0c0c0;
+    --field-error-color: #ff0040;
+    --error-text-color: #880000;
+    --focus-blue-color: #63a8e9;
+    --seen-check-color: #63a8e9;
+    --status-offline: #ff0000;
+    --status-online: #149614;
+    --favorite-check: #ffff00;
+    
+    --font-size_m: 0.8rem;
+    --font-size_r: 1rem;
+    --font-size_rl: 1.25rem;
+    --font-size_l: 1.5rem;
+    --font-size_xl: 2rem;
+
+}
+
+@function v($var) {
+    @return var(--#{$var});
+}
+
+
+
+
+// header dimensions
+$header-height: 6vh;
+$header-min-height: 50px;
+$header-max-height: 60px;
+
+$chat-input-height: 4rem;
+$chat-input-min-height: 55px;
+$chat-input-max-height: 70px;
+
+$menu-min-width: 420px;

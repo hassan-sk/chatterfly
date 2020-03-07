@@ -1,0 +1,258 @@
+
+.entry__mainDisplay {
+    display: flex;
+    height: 100vh;
+    width: 100vw;
+    justify-content: center;
+    align-items: center;
+    background-image: radial-gradient(circle, rgb(31, 98, 255), rgb(12, 37, 232));
+}
+
+.entry__formBox--login, .entry__formBox--auth {
+    background-color: white;
+    min-width: 400px;
+    max-width: 500px;
+    width: 100%;
+    padding: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    border-radius: 3px;
+}
+
+.entry__formBox--register {
+    background-color: white;
+    min-width: 800px;
+    max-width: 900px;
+    width: 100%;
+    padding: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    border-radius: 3px;
+}
+
+
+
+.entry__formBox--outside {
+    padding: 10px;
+    background-color: rgba(255, 255, 255, 0.397);
+    border-radius: 10px;
+}
+
+.entry__logoDisplay {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+}
+
+
+.entry__alert {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+.entry__alert > div {
+    width: 300px;
+    background-color: rgb(255, 204, 204);
+    padding: 6px;
+    border-radius: 5px;
+    position: relative;
+    margin-bottom: 10px;
+}
+.entry__alert > div > .cross {
+    position: absolute;
+    right: 1px;
+    top: 5px;
+    border: none;
+    background-color: transparent;
+}
+
+.entry__alert > div > .header {
+    font-size: 1.3rem;
+    border-bottom: solid rgb(102, 102, 102) 1px;
+    padding-bottom: 4px;
+    margin-bottom: 3px;
+}
+
+.entry__loginBox > .authBox {
+    display: flex;
+}
+
+.entry__loginBox > .authMessage {
+    text-align: center;
+    font-size: 1.3rem;
+}
+
+.entry__loginBox > .authConfirmation {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    text-align: center;
+    font-size: 3rem;
+    color: green;
+}
+.entry__loginBox span {
+    display: block;
+    text-align: center;
+    font-size: 1.4rem;
+}
+
+.entry__loginBox > .authBox > * {
+    flex: 1;
+    width: 2px;
+    text-align: center;
+    font-size: 3rem;
+    margin: 10px;
+}
+
+.entry__logoDisplay > img {
+    width: 50%
+}
+
+.entry__loginBox {
+    color: rgb(58, 58, 58);
+    position: relative;
+}
+
+.entry__loginBox > h1 {
+    padding-bottom: 5px;
+    border-bottom: solid rgba(128, 128, 128, 0.315) 2px;
+    margin-bottom: 20px;
+}
+
+.entry__inputBox {
+    position: relative;
+    font-size: 1.3rem;
+    margin-bottom: 20px;
+}
+
+.entry__inputBox > input {
+    z-index: 10;
+    width: 100%;
+    padding: 10px;
+    border-radius: 4px;
+    border: solid 1px grey;
+}
+
+.entry__pincode > input {
+    font-size: 2rem;
+    text-align: center;
+    letter-spacing: 4px;
+    width: 60%;
+}
+
+.entry__inputBox > label{
+    position: absolute;
+    top: 25%;
+    left: 5px;
+    pointer-events: none;
+    transition: .2s;
+    color: rgb(146, 146, 146)
+}
+
+.entry__inputBox input:focus ~ label,
+.entry__inputBox > input:valid ~ label,
+.entry__inputBox > input:disabled ~ label {
+    top: -28%;
+    font-size: 70%;
+    background-color: white;
+    padding-left: 4px;
+    padding-right: 4px;
+}
+
+
+.entry__inputBox > input:disabled {
+    background-color: white;
+}
+
+
+.entry__inputBox input:focus ~ label {
+    color: rgb(32, 55, 233);
+    transition: 0.2s;
+}
+
+.entry__inputBox input:focus {
+    border-color: rgb(32, 55, 233);
+}
+
+.entry__linksLayout {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.entry__linksLayout > * {
+    border: none;
+    background: none;
+    flex: 1;
+    color: rgb(73, 73, 73);
+    text-decoration: underline;
+    cursor: pointer;
+}
+.entry__linksLayout > :first-child{
+    text-align: left;
+}
+.entry__linksLayout > :last-child{
+    text-align: right;
+}
+
+.entry__registerBox > .holder {
+    display: flex;
+}
+
+
+.entry__registerBox > .holder > .image {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: inherit;
+    flex-direction: column;
+    padding: 10px;
+    position: relative;
+    /* background-color: rgb(247, 247, 247); */
+    margin-right: 10px;
+}
+
+
+.entry__registerBox > .holder > .image > img {
+    border-radius: 50%;
+    width: 240px;
+    height : 240px;
+}
+
+.entry__registerBox > .holder > .image > div {
+    padding-top: 10px;
+}
+
+.entry__registerBox > .holder > .fields {
+    flex: 2;
+    /* background-color: blue; */
+}
+
+
+
+
+.formTransitionGroup-enter {
+    opacity: 0.01;
+}
+.formTransitionGroup-enter.formTransitionGroup-enter-active {
+    opacity: 1;
+    transition: opacity 500ms ease-in;
+}
+.formTransitionGroup-leave {
+    opacity: 1;
+}
+.formTransitionGroup-leave.formTransitionGroup-leave-active {
+    opacity: 0.01;
+    transition: opacity 300ms ease-in;
+}
+
+.formTransitionGroup-appear {
+    opacity: 0.01;
+  }
+  
+.formTransitionGroup-appear.formTransitionGroup-appear-active {
+    opacity: 1;
+    transition: opacity .5s ease-in;
+}

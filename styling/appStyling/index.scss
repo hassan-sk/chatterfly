@@ -1,0 +1,9 @@
+@import './entry.scss';
+.app {
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    background-color: v(light);
+    @import './menu.scss';
+    @import './main.scss';
+}
